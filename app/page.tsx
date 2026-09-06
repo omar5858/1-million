@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main>
       <header className="navbar">
-        <a className="logo" href="#home">
+        <a href="/" className="logo">
           <span className="logoBox">1</span>
           <span>MILLION</span>
         </a>
@@ -16,8 +16,13 @@ export default function Home() {
         </nav>
 
         <div className="navButtons">
-          <button className="login">Log in</button>
-          <button className="register">Create account</button>
+          <a href="/login" className="login">
+            Log in
+          </a>
+
+          <a href="/register" className="register">
+            Create account
+          </a>
         </div>
       </header>
 
@@ -35,15 +40,15 @@ export default function Home() {
           </h1>
 
           <p>
-            Welcome to <b>1 MILLION</b> — a modern gaming platform
-            built for exciting experiences, premium design and
-            mobile-first entertainment.
+            Welcome to <b>1 MILLION</b> — a modern gaming
+            platform built for exciting experiences and
+            premium entertainment.
           </p>
 
           <div className="heroButtons">
-            <button className="mainButton">
+            <a href="/register" className="mainButton">
               Create account →
-            </button>
+            </a>
 
             <a href="#games" className="secondaryButton">
               Explore games
@@ -162,9 +167,7 @@ export default function Home() {
               rising multipliers.
             </p>
 
-            <button>
-              Coming soon →
-            </button>
+            <button>Coming soon →</button>
           </article>
 
           <article className="gameCard">
@@ -175,13 +178,11 @@ export default function Home() {
             <h3>Rocket</h3>
 
             <p>
-              Watch the multiplier rise and test your
-              timing in a fast arcade experience.
+              Watch the multiplier rise in a fast arcade
+              experience.
             </p>
 
-            <button>
-              Coming soon →
-            </button>
+            <button>Coming soon →</button>
           </article>
 
           <article className="gameCard">
@@ -196,9 +197,7 @@ export default function Home() {
               virtual rewards.
             </p>
 
-            <button>
-              Coming soon →
-            </button>
+            <button>Coming soon →</button>
           </article>
         </div>
       </section>
@@ -214,14 +213,14 @@ export default function Home() {
           </h2>
 
           <p>
-            Create your account and be ready for the next
-            generation of 1 MILLION gaming experiences.
+            Create your account and get ready for the next
+            generation of 1 MILLION experiences.
           </p>
         </div>
 
-        <button className="mainButton">
+        <a href="/register" className="mainButton">
           Create account
-        </button>
+        </a>
       </section>
 
       <section id="about" className="gamesSection">
@@ -237,10 +236,9 @@ export default function Home() {
           </div>
 
           <p>
-            1 MILLION is being developed as a modern,
-            mobile-first gaming platform focused on
-            original experiences, simple navigation and
-            a premium user interface.
+            1 MILLION is a modern, mobile-first gaming
+            platform focused on original experiences,
+            simple navigation and premium design.
           </p>
         </div>
       </section>
@@ -256,14 +254,14 @@ export default function Home() {
           </h2>
 
           <p>
-            Our support section will be available to help
-            users with their accounts and platform questions.
+            Our support section will help users with their
+            accounts and platform questions.
           </p>
         </div>
 
-        <button className="secondaryButton">
-          Contact support
-        </button>
+        <a href="/register" className="secondaryButton">
+          Join 1 MILLION
+        </a>
       </section>
 
       <footer>
