@@ -50,8 +50,8 @@ export default function Home() {
               Create account →
             </a>
 
-            <a href="#games" className="secondaryButton">
-              Explore games
+            <a href="/login" className="secondaryButton">
+              Log in
             </a>
           </div>
 
@@ -65,7 +65,6 @@ export default function Home() {
         <div className="gamePreview">
           <div className="previewTop">
             <span>1 MILLION ARCADE</span>
-
             <span className="demo">
               <i></i> COMING SOON
             </span>
@@ -80,7 +79,6 @@ export default function Home() {
 
             <span className="car car1">🚗</span>
             <span className="car car2">🚙</span>
-
             <span className="smallChicken">🐔</span>
           </div>
 
@@ -101,38 +99,22 @@ export default function Home() {
       <section className="stats">
         <div>
           <strong>01</strong>
-          <span>
-            Premium
-            <br />
-            platform
-          </span>
+          <span>Premium<br />platform</span>
         </div>
 
         <div>
           <strong>24/7</strong>
-          <span>
-            Platform
-            <br />
-            availability
-          </span>
+          <span>Platform<br />availability</span>
         </div>
 
         <div>
           <strong>100%</strong>
-          <span>
-            Original
-            <br />
-            experience
-          </span>
+          <span>Original<br />experience</span>
         </div>
 
         <div>
           <strong>∞</strong>
-          <span>
-            New
-            <br />
-            possibilities
-          </span>
+          <span>New<br />possibilities</span>
         </div>
       </section>
 
@@ -157,46 +139,34 @@ export default function Home() {
         <div className="gamesGrid">
           <article className="gameCard">
             <div className="gameIcon">🐔</div>
-
             <label>COMING SOON</label>
-
             <h3>Chicken Run</h3>
-
             <p>
               A fast arcade crossing experience with
               rising multipliers.
             </p>
-
             <button>Coming soon →</button>
           </article>
 
           <article className="gameCard">
             <div className="gameIcon">🚀</div>
-
             <label>COMING SOON</label>
-
             <h3>Rocket</h3>
-
             <p>
               Watch the multiplier rise in a fast arcade
               experience.
             </p>
-
             <button>Coming soon →</button>
           </article>
 
           <article className="gameCard">
             <div className="gameIcon">🎡</div>
-
             <label>COMING SOON</label>
-
             <h3>Lucky Wheel</h3>
-
             <p>
               A colorful wheel experience with exciting
               virtual rewards.
             </p>
-
             <button>Coming soon →</button>
           </article>
         </div>
@@ -271,9 +241,10 @@ export default function Home() {
         </div>
 
         <div>
+          <a href="/login">Log in</a>
+          <a href="/register">Create account</a>
           <a href="#">Terms</a>
           <a href="#">Privacy</a>
-          <a href="#">Responsible Play</a>
         </div>
 
         <p>
