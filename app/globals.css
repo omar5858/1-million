@@ -527,3 +527,100 @@ footer p {
     padding: 30px 20px;
   }
 }
+.authPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 18px;
+  background: #080a0b;
+}
+
+.authBox {
+  width: 100%;
+  max-width: 460px;
+  padding: 42px 32px;
+  border: 1px solid rgba(183, 255, 60, 0.15);
+  border-radius: 24px;
+  background: #101315;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.authBox .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.authBox h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 34px;
+  color: white;
+}
+
+.authBox > p {
+  margin: 12px 0 30px;
+  text-align: center;
+  color: #8f969b;
+  line-height: 1.6;
+}
+
+.authBox form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.authBox label {
+  margin-top: 8px;
+  color: #dce1e4;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.authBox input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 16px;
+  border: 1px solid #292f33;
+  border-radius: 12px;
+  outline: none;
+  background: #080a0b;
+  color: white;
+  font-size: 15px;
+}
+
+.authBox input:focus {
+  border-color: #b7ff3c;
+  box-shadow: 0 0 0 3px rgba(183, 255, 60, 0.08);
+}
+
+.authBox .mainButton {
+  width: 100%;
+  margin-top: 18px;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.authFooter {
+  font-size: 14px;
+}
+
+.authFooter a {
+  color: #b7ff3c;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .authBox {
+    padding: 32px 20px;
+    border-radius: 18px;
+  }
+
+  .authBox h1 {
+    font-size: 28px;
+  }
+}
