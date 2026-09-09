@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { supabase } from "../../lib/supabase";
 
 export default function LoginPage() {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -28,7 +31,7 @@ export default function LoginPage() {
       return;
     }
 
-    setMessage("Login successful! Welcome to 1 MILLION.");
+    router.push("/dashboard");
   }
 
   async function handleResetPassword() {
@@ -65,7 +68,9 @@ export default function LoginPage() {
 
         <h1>Welcome back</h1>
 
-        <p>Log in to continue to your 1 MILLION account.</p>
+        <p>
+          Log in to continue to your 1 MILLION account.
+        </p>
 
         <form onSubmit={handleLogin}>
 
@@ -102,7 +107,9 @@ export default function LoginPage() {
                 textDecoration: "underline",
               }}
             >
-              {resetLoading ? "Sending..." : "Forgot password?"}
+              {resetLoading
+                ? "Sending..."
+                : "Forgot password?"}
             </button>
           </p>
 
@@ -134,4 +141,4 @@ export default function LoginPage() {
       </div>
     </main>
   );
-            }
+}
