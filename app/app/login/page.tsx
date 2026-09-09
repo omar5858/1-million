@@ -94,24 +94,27 @@ export default function LoginPage() {
             required
           />
 
-          <p className="authFooter">
-            <button
-              type="button"
-              onClick={handleResetPassword}
-              disabled={resetLoading}
-              style={{
-                background: "none",
-                border: "none",
-                padding: 0,
-                cursor: "pointer",
-                textDecoration: "underline",
-              }}
-            >
-              {resetLoading
-                ? "Sending..."
-                : "Forgot password?"}
-            </button>
-          </p>
+          <button
+            type="button"
+            onClick={handleResetPassword}
+            disabled={resetLoading}
+            style={{
+              display: "block",
+              width: "100%",
+              margin: "10px 0 18px",
+              padding: "12px",
+              background: "#222",
+              color: "#fff",
+              border: "1px solid #555",
+              borderRadius: "8px",
+              cursor: "pointer",
+              fontSize: "15px",
+            }}
+          >
+            {resetLoading
+              ? "Sending..."
+              : "Forgot password?"}
+          </button>
 
           <button
             type="submit"
