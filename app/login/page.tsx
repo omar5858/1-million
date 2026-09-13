@@ -1,13 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { supabase } from "../../lib/supabase";
 
 export default function LoginPage() {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [resetLoading, setResetLoading] = useState(false);
 
   async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -27,7 +31,30 @@ export default function LoginPage() {
       return;
     }
 
-    setMessage("Login successful! Welcome to 1 MILLION.");
+    router.push("/dashboard");
+  }
+
+  async function handleResetPassword() {
+    if (!email) {
+      setMessage("Please enter your email first.");
+      return;
+    }
+
+    setResetLoading(true);
+    setMessage("");
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+
+    setResetLoading(false);
+
+    if (error) {
+      setMessage(error.message);
+      return;
+    }
+
+    setMessage("Password reset email sent. Check your Gmail.");
   }
 
   return (
@@ -41,7 +68,9 @@ export default function LoginPage() {
 
         <h1>Welcome back</h1>
 
-        <p>Log in to continue to your 1 MILLION account.</p>
+        <p>
+          Log in to continue to your 1 MILLION account.
+        </p>
 
         <form onSubmit={handleLogin}>
 
@@ -64,6 +93,24 @@ export default function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+
+          <p className="authFooter">
+            <button
+              type="button"
+              onClick={handleResetPassword}
+              disabled={resetLoading}
+              style={{
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+                textDecoration: "underline",
+                color: "inherit",
+              }}
+            >
+              {resetLoading ? "Sending..." : "Forgot password?"}
+            </button>
+          </p>
 
           <button
             type="submit"
